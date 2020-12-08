@@ -24,6 +24,16 @@ Pagina de edição
 
 <hr>
 <div ng-app="myApp" ng-controller="myCtrl">
+	<!--entradas-->
+		<p>ID : <input type="number" ng-model="id"></p>
+		<p>Nome : <input type="text" ng-model="nome"></p>
+		<p>Categoria : <input type="text" ng-model="categoria"></p>
+		
+		<button ng-click="buscarTodos()">get all </button>
+		<button ng-click="salvar()">insert </button>
+		<button ng-click="delete()">delete </button>
+		<button ng-click="put()">put </button>
+<!-- tabela -->
 	<table border="1">
 		<tr>
 			<th>id</th> 
@@ -36,7 +46,7 @@ Pagina de edição
 			<td>{{manutencao.id}}</td> 
 			<td>{{manutencao.nome}}</td> 
 			<td>{{manutencao.categoria}}</td> 
-			<td> Botão </td>
+			<td> editar | excluir </td>
 		</tr>
 	</table>
 </div>
