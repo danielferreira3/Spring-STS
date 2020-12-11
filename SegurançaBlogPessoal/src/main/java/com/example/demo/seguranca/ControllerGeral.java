@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.model.Tema;
 import com.example.demo.repository.TemaRepository;
 
+
+//deireciona o localhost:8080 para o index
 @Controller
 public class ControllerGeral {
 
+	
 	@Autowired
 	private TemaRepository repository;
 

@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
+//pega informação do usuario e cria a tabela no banco de dados
 @Entity
 public class Usuario implements UserDetails, Serializable {
 	
@@ -25,7 +25,7 @@ public class Usuario implements UserDetails, Serializable {
 	private String nomeCompleto;
 	private String senha;
 
-	@ManyToMany
+	@ManyToMany				// criando tabela no banco de cados
 	@JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "login"),
 										inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "nomeRole"))
 	
